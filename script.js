@@ -8,7 +8,7 @@ const rockpaper = function () {
   } else if (a === 2) {
     return "Rock";
   } else {
-    return "scisors";
+    return "Scissor";
   }
 };
 const scoreboard = function (wins) {
@@ -34,21 +34,21 @@ const winner = function (human, computer) {
   if (human == "Rock" && computer == "Paper") {
     scoreboard(1);
     return `Computer wins with ${computer} against ${human}`;
-  } else if (human == "Paper" && computer == "scisors") {
+  } else if (human == "Paper" && computer == "Scissor") {
     scoreboard(1);
     return `Computer wins with ${computer} against ${human}`;
-  } else if (human == "scisors" && computer == "Rock") {
+  } else if (human == "Scissor" && computer == "Rock") {
     scoreboard(1);
     return `Computer wins with ${computer} against ${human}`;
   } else if (human === computer) {
     return "Its a draw";
-  } else if (computer == "Paper" && human == "scisors") {
+  } else if (computer == "Paper" && human == "Scissor") {
     scoreboard(0);
     return `Human wins with ${human} against ${computer}`;
   } else if (computer == "Rock" && human == "Paper") {
     scoreboard(0);
     return `Human wins with ${human} against ${computer}`;
-  } else if (computer == "scisors" && human == "Rock") {
+  } else if (computer == "Scissor" && human == "Rock") {
     scoreboard(0);
     return `Human wins with ${human} against ${computer}`;
   }
@@ -57,7 +57,11 @@ const winner = function (human, computer) {
 //   console.log(winner(prompt(), rockpaper()), humanScore, computerScore);
 // }
 
+const capitalize = function () {
+  const str = prompt();
+  return str.charAt(0).toUpperCase() + str.slice(1).toLocaleLowerCase();
+};
 while (!isThereWiner) {
-  console.log(winner(prompt(), rockpaper()));
+  console.log(winner(capitalize(), rockpaper()));
 }
 // console.log(winner(rockpaper(), rockpaper()));
