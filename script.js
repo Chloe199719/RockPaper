@@ -40,7 +40,7 @@ const rockpaper = function () {
   }
 };
 
-// Winnder of Current Round
+// Winner of Current Round
 const scoreboard = function (wins) {
   if (wins === 0) {
     humanScore++;

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  /* background-color: rgba(168, 50, 162, 0.5); */
+}
+header {
+  padding: 50px 15%;
+}
+h1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 40px;
+}
+.selectContainer {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-flow: column;
+  margin: 0 15%;
+  padding: 50px 10%;
+  grid-gap: 20px;
+  background: green;
+}
+.button-select {
+  padding: 50px 0px;
+  font-size: 20px;
+  background: paleturquoise;
+}
