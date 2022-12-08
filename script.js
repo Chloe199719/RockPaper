@@ -1,6 +1,15 @@
+// Init
+
 let humanScore = 0;
 let computerScore = 0;
 let isThereWiner = false;
+// const rockbtn = document.querySelector(`#rock`);
+// const paperBtn = document.querySelector(`#paper`);
+// const scissorBtn = document.querySelector(`#scissor`);
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
+
+// Computer selection
 const rockpaper = function () {
   let a = Math.floor(Math.random() * 3);
   if (a === 1) {
@@ -61,7 +70,7 @@ const capitalize = function () {
   const str = prompt();
   return str.charAt(0).toUpperCase() + str.slice(1).toLocaleLowerCase();
 };
-while (!isThereWiner) {
-  console.log(winner(capitalize(), rockpaper()));
-}
+// while (!isThereWiner) {
+//   console.log(winner(capitalize(), rockpaper()));
+// }
 // console.log(winner(rockpaper(), rockpaper()));
