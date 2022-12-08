@@ -28,3 +28,11 @@ h1 {
   font-size: 20px;
   background: paleturquoise;
 }
+footer {
+  background-color: #1f2937;
+  padding: 35px;
+}
+footer p {
+  text-align: center;
+  color: #e5e7eb;
+}
