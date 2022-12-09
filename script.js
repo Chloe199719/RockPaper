@@ -5,7 +5,10 @@ let computerScore = 0;
 // let isThereWiner = false;
 const results = document.querySelector(`.result`);
 const buttons = document.querySelectorAll("button");
-const leaderboard = document.querySelector(`.leaderboard`);
+const leaderboardHuman = document.querySelector(`.leaderboard-human-score`);
+const leaderboardComputer = document.querySelector(
+  `.leaderboard-computer-score`
+);
 const resetbtn = document.querySelector(`.resetbutton`);
 
 buttons.forEach((button) =>
@@ -25,7 +28,9 @@ resetbtn.addEventListener(`click`, reset);
 
 // Leader Board Update
 const leaderboardUpdate = function () {
-  leaderboard.textContent = `Human Score : ${humanScore}   Computer Score: ${computerScore}`;
+  leaderboardHuman.textContent = `${humanScore}`;
+  leaderboardComputer.textContent = `${computerScore}`;
+  // leaderboard.textContent = `Human Score : ${humanScore}   Computer Score: ${computerScore}`;
 };
 
 // Computer selection
